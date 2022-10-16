@@ -2,8 +2,8 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         '''
-        TC = O()
-        SC = O()
+        TC = O(n)
+        SC = O(n)
         '''
         # for i in range(0, len(nums)):
         #     diff = target - nums[i]
