@@ -8,8 +8,7 @@ class Solution:
         # write your code here
         res = ""
         for s in strs:
-            newstr = str(len(s)) + "$" + s
-            res += newstr
+            res += str(len(s)) + "$" + s
         return res
 
     """
@@ -18,7 +17,7 @@ class Solution:
     """
     def decode(self, str):
         # write your code here
-        
+
         return ""
 
 # Unit Test
