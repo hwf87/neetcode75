@@ -1,29 +1,28 @@
-# 659. Encode and Decode Strings
+# leetcode 271. lintcode 659. Encode and Decode Strings
 class Solution:
-    """
-    @param: strs: a list of strings
-    @return: encodes a list of strings to a single string.
-    """
     def encode(self, strs: list) -> str:
-        # write your code here
+        '''
+        TC = O(n)
+        SC = O(n)
+        '''
         res = ""
         for s in strs:
             res += str(len(s)) + "$" + s
         return res
 
-    """
-    @param: str: A string
-    @return: dcodes a single string to a list of strings
-    """
     def decode(self, str: str) -> list:
-        # write your code here
+        '''
+        TC = O(n)
+        SC = O(n)
+        '''
         res, idx = [], 0
         while idx < len(str):
-            tmp = ''
-            if str[idx].isnumeric() and str[idx+1] == '$':
-                start = idx + 2
-                end = start + int(str[idx])
-                res.append(str[start:end])
+            idx2 = idx
+            while str[idx2] != '$':
+                idx2 += 1
+            start = idx2 + 1
+            end = start + int(str[idx:idx2])
+            res.append(str[start:end])
             idx = end
         return res
 
