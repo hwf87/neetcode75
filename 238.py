@@ -6,16 +6,21 @@ class Solution:
         TC = O(n)
         SC = O(n)
         '''
+        # EX. input nums : [1, 2, 3, 4]
+
         answer = [1] * len(nums)
-        
+        # [1, 1, 1, 1]
+
         prefix = 1
         for i in range(len(nums)):
             answer[i] = prefix
             prefix *= nums[i]
+        # [1, 1, 2, 6]
         postfix = 1
         for i in range(len(nums)-1, -1, -1):
             answer[i] *= postfix
             postfix *= nums[i]
+        # [24, 12, 8, 6]
         return answer
     
 # Unit Test
