@@ -11,7 +11,21 @@ This is a repository for coding practices.
 *
 
 ### 3. Sliding Window
-* 
+* Template to solve most of Sliding Window question
+```python
+class Solution:
+    def foo(self, s: str, k: int) -> int:
+        # Use a hash map or a set for question that ask about repeating
+        # Use a max count or min count for question ask about longest/shortest substring
+        # A variable for the start of our window
+		
+        for windowEnd in range(len(s)):
+			# Perform something to our map/set or anything that'll be used for the result
+			# Condition to stop our window and move to the next window
+            # Calculate the window max/min length if question asking about length, sum if question about sum and so on
+			
+        # Return what the question want
+```
 
 
 ---
