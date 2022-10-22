@@ -2,20 +2,35 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         '''
+        TC = O(n)
+        SP = O(n)
         '''
-        hashmap = {}
-        left, right, res = 0, 0, 0
-        # Need to add some comment to explain in detail
-        while right < len(s):
-            hashmap[s[right]] = hashmap.get(s[right], 0) + 1
-
-            while (right-left+1) - max(hashmap.values()) > k:
-                hashmap[s[left]] -= 1
-                left += 1
-            res = max(res, right - left + 1)
-            right += 1
-        return res
+        left, right, longest = 0, 0, 0
+        table = {}
         
+        while right < len(s):            
+            # update hash table while increasing right pointer every time
+            table[s[right]] = table.get(s[right], 0) + 1
+            
+            # Non-Valid result => Not enough K to replace current window to be unique 
+            # Window size - value of character most count > K character can be replaced 
+            
+            while (right - left + 1) - max(table.values()) > k:
+                # If reslut is NOT valid:
+                # Keep update hash table and adding left pointer by 1
+                # Until the result is valid 
+                table[s[left]] -= 1
+                left += 1
+                
+            # Calculate longest result
+            # Note the result need to be calculated before right pointer is updated
+            longest = max(longest, right - left + 1)
+            
+            # If reslut is valid: 
+            # Increase right pointer by 1
+            right += 1   
+        return longest
+
 # Unit Test
 import pytest
 class TestCase(Solution):
