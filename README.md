@@ -27,6 +27,9 @@ class Solution:
         # Return what the question want
 ```
 
+### 4. Stack
+* Stack type follow "last-in, first-out" principle
+* Which is using list.append() first, then list.pop() later
 
 ---
 ### Test Case Template
