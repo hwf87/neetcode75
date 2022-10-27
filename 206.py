@@ -44,7 +44,12 @@ def create_my_linked_list(mylist: list) -> SingleLinkedList:
     for node in mylist:
         MyLinkedList.append(node)
     return MyLinkedList
-    
+
+
+a = create_my_linked_list([1,2,3]).head
+print(a)
+print(a.val)
+
 
 # print(SL)
 # print(type(SL))
@@ -65,8 +70,8 @@ class TestCase(Solution):
     def test_reverseList(self, head, expect):
         '''
         '''
-        head = create_my_linked_list(head)
-        expect = create_my_linked_list(expect)
+        head = create_my_linked_list(head).head
+        expect = create_my_linked_list(expect).head
 
         answer = self.reverseList(head)
         assert answer == expect
