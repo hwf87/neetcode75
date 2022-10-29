@@ -31,6 +31,34 @@ class Solution:
 * Stack type follow "last-in, first-out" principle
 * Which is using list.append() first, then list.pop() later
 
+### 5. Binary Search
+* TC = O(Log N)
+
+### 6. Linked List
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def append(self, val):
+        new_node = ListNode(val)
+        # if head is None, which means the first Node
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = self.tail.next
+```
+
+
+
 ---
 ### Test Case Template
 ```python
