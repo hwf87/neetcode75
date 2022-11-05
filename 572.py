@@ -11,3 +11,10 @@ class Solution:
         '''
         '''
         
+        return ''
+    
+    def isSametree(self, s: Optional[TreeNode], t: Optional[TreeNode]) -> bool:
+        '''
+        '''
+        return ''
+
