@@ -57,7 +57,14 @@ class SingleLinkedList:
             self.tail = self.tail.next
 ```
 
-
+### 7. Trees
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+```
 
 ---
 ### Test Case Template
