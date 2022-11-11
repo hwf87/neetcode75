@@ -6,6 +6,9 @@ class Solution:
         TC = O(n)
         SC = O(1)
         '''
+        # Since input array has been sorted
+        # We can simply use two pointer to seeking the answer
+        # Otherwise, sorted algorithm is TC = O(NlogN) 
         left, right = 0, len(numbers)-1
         while left < right:
             current = numbers[left] + numbers[right]
