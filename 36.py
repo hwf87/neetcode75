@@ -4,8 +4,8 @@ from typing import List
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         '''
-        TC = O(n*2)
-        SC = O(n)
+        TC = O(9^2)
+        SC = O(9)
         '''
         row_dict = collections.defaultdict(set)
         column_dict = collections.defaultdict(set)
