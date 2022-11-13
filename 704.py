@@ -6,10 +6,16 @@ class Solution:
         TC = O(log n)
         SC = O(1)
         '''
+        # Remember to minus 1 to the right pointer 
         left, right = 0, len(nums)-1
 
+        # Note that left can be equal to right when nums lenght is odd
+        # Hence, an equal operator in while condition is for it
         while left <= right:
-            mid = (left + right)//2
+            # If we set mid = (left + right)//2, it is working
+            # But that might potentially cause overflow error
+            mid = left + (right - left)//2
+            
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
