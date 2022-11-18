@@ -66,6 +66,13 @@ class TreeNode:
         self.right = right
 ```
 
+### 7. Tires
+```python
+# Add some descriptions here
+# What is Tires
+# Usecase? (Auto-complete)
+```
+
 ---
 ### Test Case Template
 ```python
