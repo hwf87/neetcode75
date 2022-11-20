@@ -2,6 +2,8 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         '''
+        TC = O()
+        SC = O()
         '''
         left, right = 0, len(s)-1
 
@@ -15,6 +17,7 @@ class Solution:
                 else: 
                     return False
         return True
+
     
     def validPalindrome_1(self, s: str) -> bool:
         left, right = 0, len(s)-1
@@ -26,8 +29,6 @@ class Solution:
             else:
                 return False
         return True
-
-    
 
 
 # Unit Test
